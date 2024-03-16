@@ -18,15 +18,13 @@
 body{
     background-color: var(--green-100);
     color: var(--black);
-    height: 100vh;
-    display: flex;
-    align-items: center;
 }
 
 .main-container{
     width: 90%;
     max-width: 700px;
     margin: 0 auto;
+    margin-top: 70px;
 }
 
 .upper-container{
@@ -59,14 +57,14 @@ body{
     background-color: var(--green-500);
   }
 
-  .ans-container{
+  #ans-container{
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 30px;
   }
 
-  .ans-container .btn{
+  #ans-container button{
     padding: 15px 30px;
     text-align: left;
     border: none;
@@ -74,14 +72,28 @@ body{
     background-color: white;
     font-weight: 400;
     cursor: pointer;
+    transition: all 0.3s;
   }
-  .ans-container .btn:hover{
-    background-color: var(--green-400);
+
+
+  #ans-container .btn:hover:not([disabled]){
+    background-color: var(--black);
+    color: white;
   }
   .next-btn-container{
     display: flex;
     justify-content: center;
   }
+
+  #ans-container .correct{
+    background-color: var(--green-400);
+    color: white;
+  }
+  #ans-container .incorrect{
+    background-color: #ff6156;
+    color: white;
+  }
+
   .next-btn{
     border:none;
     padding: 15px 20px;
