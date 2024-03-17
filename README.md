@@ -2,9 +2,9 @@
 Collection of small js projects I did👨‍💻
 | **Project Name🧩** | **What Used?💡** | **Live Website👀** |
 |--------------------|---------------------|------------|
-| **Role Playing Game**               | variables, arrays, functions, DOM, object, if else, loops                    | [Live Game](https://dragon-repeller-game.netlify.app/)           |
-| **Calorie Counter**               | variables, DOM, regex, array, events, functions, arrays, etc                    | [Live Game](https://calorie-counter-02.netlify.app/)            |
-| ****               |                     |            |
+| **Role Playing Game**               | HTML, CSS, JavaScript                    | [Live Game](https://dragon-repeller-game.netlify.app/)           |
+| **Calorie Counter**               | HTML, CSS, JavaScript                    | [Live Website](https://calorie-counter-02.netlify.app/)            |
+| **Quiz App**               | HTML, CSS, JavaScript, Font awesome, Google font                    | [Live App](https://quiz-app-manik.netlify.app/)           |
 | ****               |                     |            |
 | ****               |                     |            |
 | ****               |                     |            |
