@@ -98,12 +98,64 @@ const playSong = (id) =>{
     else {
         audio.currentTime = userData?.songCurrentTime;
     }
+    userData.currentSong = song;
+    playButton.classList.add("playing");
+    setPlayerDisplay()
+    highlightCurrentSong();
+    setPlayButtonAccessibleText();
+    audio.play();
+}
+
+
+const setPlayerDisplay = () =>{
+  const playingSong = document.getElementById("player-song-title");
+  const songArtist = document.getElementById("player-song-artist");
+  const currentTitle = userData?.currentSong?.title;
+  const currentArtist = userData?.currentSong?.artist;
+  playingSong.textContent = currentTitle ? currentTitle : "";
+  songArtist.textContent = currentArtist ? currentArtist : "";
+}
+
+const pauseSong = () =>{
+  
+  userData.songCurrentTime = audio.currentTime;
+  playButton.classList.remove("playing");
+  audio.pause();
+}
+
+const playPreviousSong = () => {
+  if (userData?.currentSong == null){
+    playSong(userData?.songs[userData.songs.length -1].id);
+  }
+  else
+  {
+    let currentSongIndex = getCurrentSongIndex();
+    if (currentSongIndex == 0){
+      currentSongIndex = userData?.songs.length;
+    }
+    const previousSong = userData?.songs[currentSongIndex - 1];
+    playSong(previousSong.id);
+  }
+}
+
+const playNextSong = () => {
+  if (userData?.currentSong === null){
+    playSong(userData?.songs[0].id);
+  }
+  else{
+    let currentSongIndex = getCurrentSongIndex();
+    if (currentSongIndex == (userData?.songs.length -1)){
+      currentSongIndex = -1;
+    }
+    const nextSong = userData?.songs[currentSongIndex + 1];
+    playSong(nextSong.id);
+  }
 }
 
 const renderSongs = (array) => {
     const songsHTML = array.map((song) => {
         return `<li id="song-${song.id}" class="playlist-song">
-        <button class = "playlist-song-info">
+        <button onclick="playSong(${song.id})" class = "playlist-song-info">
         <span class = "playlist-song-title">${song.title}</span>
         <span class = "playlist-song-artist">${song.artist}</span>
         <span class = "playlist-song-duration">${song.duration}</span>
@@ -132,5 +184,51 @@ const sortSongs = () =>{
     return userData?.songs;
 }
 
+const setPlayButtonAccessibleText = () =>{
+  const song = userData?.currentSong || userData?.songs[0];
+  playButton.setAttribute("aria-label", song?.title ? `Play ${song.title}` : "Play");
+
+}
+
+const getCurrentSongIndex = () =>{
+  return userData?.songs.indexOf(userData?.currentSong);
+}
+
+playButton.addEventListener("click", ()=>{
+  if (!userData?.currentSong){
+    playSong(userData?.songs[0].id)
+  }
+  else{
+    playSong(userData?.currentSong.id);
+  }
+})
+
+const highlightCurrentSong  = () => {
+    const playlistSongElements = document.querySelectorAll(".playlist-song");
+    const songToHighlight = document.getElementById(`song-${userData?.currentSong?.id}`);
+    playlistSongElements.forEach((songEl) => {
+      songEl.removeAttribute("aria-current");
+      if (songToHighlight){
+        songToHighlight.setAttribute("aria-current", "true");
+      }
+    })
+}
+
+const shuffle = () => {
+  userData?.songs.sort(() => Math.random() - 0.5);
+  userData.currentSong = null;
+  userData.currentTime = 0;
+  renderSongs(userData?.songs);
+  pauseSong();
+  setPlayerDisplay();
+  setPlayButtonAccessibleText();
+}
+
+
+shuffleButton.addEventListener("click", shuffle);
+previousButton.addEventListener("click", playPreviousSong)
+nextButton.addEventListener("click", playNextSong)
+
+pauseButton.addEventListener("click", pauseSong)
 
 renderSongs(sortSongs()); // this is called  optional chaining
