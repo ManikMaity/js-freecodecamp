@@ -7,5 +7,5 @@ Collection of small js projects I did👨‍💻
 | **Quiz App**               | HTML, CSS, JavaScript, Font awesome, Google font                    | [Live App](https://quiz-app-manik.netlify.app/)           |
 | **TO-DO APP**               | HTML, CSS, JavaScript - local storage, Font awesome, Google font                    | [Live App](https://to-do-app-manik.netlify.app/)           |
 | **Currency Converter**               | HTML, CSS, JavaScript - async, promises, API call, json                    | [Live App](https://currency-converter-manik.netlify.app/)           |
-| ****               |                     |            |
+| **Music App**               |                     |[Live App](https://music-app-manik.netlify.app/)            |
 | ****               |                     |            |
