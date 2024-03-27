@@ -11,6 +11,12 @@ const playerImageEle = document.getElementById("player-image");
 const sortSelectionEle = document.getElementById("sort-select");
 const sortBtnEle = document.querySelector(".sort-song-container button");
 const seekbarEle = document.getElementById("songSeekbar");
+const addSongBtn = document.getElementById("add-song");
+const searchPopupEle = document.querySelector(".search-popup");
+const closePopupBtn = document.getElementById("close-popup");
+const searchSongBtn = document.getElementById("searh-song");
+const songNameInput = document.getElementById("addSongName");
+const searchSongDesEle = document.getElementById("search-des");
 
 const playlistLinks = [
   "https://www.jiosaavn.com/featured/hindi-hit-songs/ZodsPn39CSjwxP8tCU-flw__",
@@ -59,70 +65,80 @@ let allSongs = [
     title: "Scratching The Surface",
     artist: "Quincy Larson",
     duration: "4:25",
-    src: "https://aac.saavncdn.com/223/7eddc0f9b56f110ae39a145752fabb34_320.mp4",
+    src:
+      "https://aac.saavncdn.com/223/7eddc0f9b56f110ae39a145752fabb34_320.mp4",
   },
   {
     id: 1,
     title: "Can't Stay Down",
     artist: "Quincy Larson",
     duration: "4:15",
-    src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/cant-stay-down.mp3",
+    src:
+      "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/cant-stay-down.mp3",
   },
   {
     id: 2,
     title: "Still Learning",
     artist: "Quincy Larson",
     duration: "3:51",
-    src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/still-learning.mp3",
+    src:
+      "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/still-learning.mp3",
   },
   {
     id: 3,
     title: "Cruising for a Musing",
     artist: "Quincy Larson",
     duration: "3:34",
-    src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/cruising-for-a-musing.mp3",
+    src:
+      "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/cruising-for-a-musing.mp3",
   },
   {
     id: 4,
     title: "Never Not Favored",
     artist: "Quincy Larson",
     duration: "3:35",
-    src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/never-not-favored.mp3",
+    src:
+      "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/never-not-favored.mp3",
   },
   {
     id: 5,
     title: "From the Ground Up",
     artist: "Quincy Larson",
     duration: "3:12",
-    src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/from-the-ground-up.mp3",
+    src:
+      "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/from-the-ground-up.mp3",
   },
   {
     id: 6,
     title: "Walking on Air",
     artist: "Quincy Larson",
     duration: "3:25",
-    src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/walking-on-air.mp3",
+    src:
+      "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/walking-on-air.mp3",
   },
   {
     id: 7,
     title: "Can't Stop Me. Can't Even Slow Me Down.",
     artist: "Quincy Larson",
     duration: "3:52",
-    src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/cant-stop-me-cant-even-slow-me-down.mp3",
+    src:
+      "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/cant-stop-me-cant-even-slow-me-down.mp3",
   },
   {
     id: 8,
     title: "The Surest Way Out is Through",
     artist: "Quincy Larson",
     duration: "3:10",
-    src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/the-surest-way-out-is-through.mp3",
+    src:
+      "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/the-surest-way-out-is-through.mp3",
   },
   {
     id: 9,
     title: "Chasing That Feeling",
     artist: "Quincy Larson",
     duration: "2:43",
-    src: "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/chasing-that-feeling.mp3",
+    src:
+      "https://s3.amazonaws.com/org.freecodecamp.mp3-player-project/chasing-that-feeling.mp3",
   },
 ];
 
@@ -139,8 +155,7 @@ const playSong = (id) => {
   const song = userData?.songs.find((song) => song.id == id);
   audio.src = song.src;
   audio.title = song.title;
-  getAudioDuration();
-  console.log(userData.maxDuration);
+  
   if (song.image) {
     playerImageEle.src = song?.image;
   }
@@ -148,6 +163,10 @@ const playSong = (id) => {
     audio.currentTime = 0;
   } else {
     audio.currentTime = userData?.songCurrentTime;
+  }
+  audio.onloadedmetadata= () =>{
+    seekbarEle.max = audio.duration;
+    seekbarEle.value = audio.currentTime;
   }
   userData.currentSong = song;
   playButton.classList.add("playing");
@@ -157,11 +176,9 @@ const playSong = (id) => {
   audio.play();
 };
 
-const getAudioDuration = () => {
-  audio.addEventListener("loadedmetadata", function () {
-    userData.maxDuration = audio.duration;
-  });
-};
+
+
+
 
 const setPlayerDisplay = () => {
   const playingSong = document.getElementById("player-song-title");
@@ -369,6 +386,59 @@ const sortBySelect = () => {
   setPlayButtonAccessibleText();
 };
 
+const addNewSong = () => {
+  if (songNameInput.value == "") {
+    searchSongDesEle.textContent = "Please enter song name.";
+    searchSongDesEle.style.color = "red";
+    return;
+  }
+  let songName = songNameInput.value;
+  songNameInput.value = "";
+  searchSongDesEle.textContent = "Fetching song...";
+  (async () => {
+    let tempObj = {};
+    const songJSON = await fetch(
+      `https://saavn.dev/api/search/songs?query=${songName}`
+    );
+    const songData = await songJSON.json();
+    let song = songData.data.results[0];
+    tempObj.id = userData?.songs.length;
+    tempObj.title = song.name;
+    const artist = song.artists.primary[1];
+    tempObj.artist = artist ? artist.name : "Unknown";
+    tempObj.duration = durationConvert(song.duration);
+    tempObj.src = song.downloadUrl[song.downloadUrl.length - 1]?.url;
+    tempObj.image = song.image[1].url;
+    return tempObj;
+  })()
+    .then((data) => {
+      userData.songs.push(data);
+      searchSongDesEle.style.color = "green"
+      searchSongDesEle.textContent = "Song Added"
+      console.log(userData.songs)
+      renderSongs(userData?.songs);
+      pauseSong();
+      setPlayerDisplay();
+      setPlayButtonAccessibleText();
+    })
+    .catch(() => {
+      searchSongDesEle.style.color = "red"
+      searchSongDesEle.textContent = "Error : Cant fetch song";
+    });
+};
+
+if (audio.play()){
+  setInterval(()=>{
+    seekbarEle.value = audio.currentTime;
+  }, 1000)
+}
+
+seekbarEle.onchange = ()=>{
+  audio.play();
+  audio.currentTime = seekbarEle.value;
+
+}
+
 audio.addEventListener("ended", () => {
   const currentSongIndex = getCurrentSongIndex();
   const nextSongExists =
@@ -385,6 +455,16 @@ audio.addEventListener("ended", () => {
   }
 });
 
+addSongBtn.addEventListener("click", () => {
+  searchPopupEle.style.display = "flex";
+});
+closePopupBtn.addEventListener("click", () => {
+  searchPopupEle.style.display = "none";
+  searchSongDesEle.textContent = "";
+  searchSongDesEle.style.color = "white";
+});
+
+searchSongBtn.addEventListener("click", addNewSong);
 getPlaylistBtn.addEventListener("click", updatePlaylist);
 shuffleButton.addEventListener("click", shuffle);
 previousButton.addEventListener("click", playPreviousSong);

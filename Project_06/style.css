@@ -173,7 +173,7 @@ button:focus,
 
 .add-on {
   background-color: var(--background-color);
-  max-height: 30px;
+  height: 30px;
   max-width: 450px;
   gap: 5px;
   width: 100%;
@@ -185,6 +185,55 @@ button:focus,
 
 .add-on div {
   background-color: var(--app-background-color);
+}
+
+.add-song > button{
+  padding: 10px;
+  border-radius: 35px;
+  text-align: center;
+  font-weight: bold;
+  background-color: var(--background-color);
+  box-shadow: 2px 2px 8px #1515159c;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+#close-popup{
+  position: absolute;
+  font-weight: bold;
+  right: 20px;
+  top: 20px;
+}
+
+.search-popup{
+  background-color: #000000b4;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.song-search-container{
+  opacity: 1;
+}
+.song-search-container > input{
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+.song-search-container > button{
+  padding: 0px 20px;
+  height: 100%;
+  background-color: var(--background-color);
+  color: #dfdfe2;
 }
 
 #songSeekbar {
@@ -307,13 +356,25 @@ button:focus,
   .add-on {
     width: 100%;
   }
+  body{
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .container{
+    margin: 0;
+  }
 
   .player {
     height: 340px;
   }
 
+  .playlist{
+    height: calc(100vh - 380px);
+  }
+
   #playlist-songs {
-    height: 280px;
+    height: 100%;
     padding: 5px 6px;
     overflow-y: scroll;
     overflow-x: hidden;
