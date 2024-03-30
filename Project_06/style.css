@@ -270,6 +270,7 @@ button:focus,
   flex-direction: column;
   row-gap: 8px;
   padding: 8px 9px;
+  overflow-y: scroll;
   visibility: visible;
   justify-content: start;
   list-style: none;
@@ -370,7 +371,7 @@ button:focus,
   }
 
   .playlist{
-    height: calc(100vh - 380px);
+    height: calc(100vh - 410px);
   }
 
   #playlist-songs {

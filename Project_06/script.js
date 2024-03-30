@@ -277,7 +277,6 @@ const updatePlaylist = () => {
     userData.songCurrentTime = 0;
     pauseSong();
     renderSongs(sortSongs());
-    console.log(userData.songs);
   });
 };
 
@@ -386,6 +385,13 @@ const sortBySelect = () => {
   setPlayButtonAccessibleText();
 };
 
+const findNewSongId = () =>{
+  const allSongIds = userData.songs.map((song) =>{
+    return song.id;
+  })
+  return Math.max(...allSongIds)+1;
+}
+
 const addNewSong = () => {
   if (songNameInput.value == "") {
     searchSongDesEle.textContent = "Please enter song name.";
@@ -415,7 +421,6 @@ const addNewSong = () => {
       userData.songs.push(data);
       searchSongDesEle.style.color = "green"
       searchSongDesEle.textContent = "Song Added"
-      console.log(userData.songs)
       renderSongs(userData?.songs);
       pauseSong();
       setPlayerDisplay();
