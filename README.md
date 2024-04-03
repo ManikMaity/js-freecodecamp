@@ -8,4 +8,4 @@ Collection of small js projects I did👨‍💻
 | **TO-DO APP**               | HTML, CSS, JavaScript - local storage, Font awesome, Google font                    | [Live App](https://to-do-app-manik.netlify.app/)           |
 | **Currency Converter**               | HTML, CSS, JavaScript - async, promises, API call, json                    | [Live App](https://currency-converter-manik.netlify.app/)           |
 | **Music App**               |                     |[Live App](https://music-app-manik.netlify.app/)            |
-| ****               |                     |            |
+| **Note App**               | HTML, CSS, JavaScript - export and import, classes                    | [Live App](https://note-app-manik.netlify.app/)           |

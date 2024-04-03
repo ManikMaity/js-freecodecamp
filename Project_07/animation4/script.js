@@ -1,0 +1,1 @@
+gsap.fromTo(".text-container", {x:100, opacity:0}, {x:0, opacity:1, duration:2})

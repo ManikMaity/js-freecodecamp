@@ -1,0 +1,21 @@
+button{
+    background-color: #28bd114f;
+    border: 3px solid #3dc03d;
+    color: #3dc03d;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+button:hover{
+    transform: translateY(100px);
+    background-color: #3dc03d;
+    color: white;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
