@@ -9,7 +9,7 @@ Collection of small js projects I did👨‍💻
 | **Currency Converter**               | HTML, CSS, JavaScript - async, promises, API call, json                    | [Live App](https://currency-converter-manik.netlify.app/)           |
 | **Music App**               |                     |[Live App](https://music-app-manik.netlify.app/)            |
 | **Note App**               | HTML, CSS, JavaScript - export and import, classes                    | [Live App](https://note-app-manik.netlify.app/)           |
-| **Date Formater**               |                     |            |
+| **Date Formater**               | HTML, CSS, JavaScript                    | [Live App](https://date-formatter-manik.netlify.app/)           |
 | ****               |                     |            |
 | ****               |                     |            |
 | ****               |                     |            |
