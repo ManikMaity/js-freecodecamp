@@ -62,6 +62,7 @@ export default class NotesView {
               <span>${updated.toLocaleString(undefined, {
                 dataStle: "full",
               })}</span>
+              <i class="fa-solid fa-trash delete-card"></i>
             </div>
      `;
   }
@@ -92,6 +93,13 @@ export default class NotesView {
           this.onNoteDelete(noteCard.dataset.noteId);
         }
       });
+
+      noteCard.querySelector(".delete-card").addEventListener("click", ()=>{
+        const dbDelete = confirm("Are you realy want to delete this note?");
+        if (dbDelete) {
+          this.onNoteDelete(noteCard.dataset.noteId);
+        }
+      })
     });
   }
 
