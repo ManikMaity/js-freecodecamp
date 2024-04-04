@@ -1,32 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Tahoma, sans-serif;
 }
-:root{
+
+:root {
     --dark-blue: #141b26;
     --blue-600: #27374D;
 }
-body{
+
+body {
     background-color: var(--dark-blue);
     display: flex;
     justify-content: center;
     height: 100vh;
 }
-.outer-container{
+
+.outer-container {
     max-width: 500px;
     width: 90%;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    color:aliceblue;
+    color: aliceblue;
     padding-top: 50px;
 }
-.main-container{
+
+.main-container {
     background-color: #e7e7e7;
-    color:#13171f;
+    color: #13171f;
     width: 100%;
     padding: 6% 12%;
     display: flex;
@@ -35,13 +39,15 @@ body{
     border-radius: 20px;
     box-shadow: 0px 8px 6px #365940;
 }
-.main-container .input-container{
+
+.main-container .input-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
 }
-.input-container input{
+
+.input-container input {
     border: none;
     border-bottom: 2px solid #365940;
     height: 40px;
@@ -50,7 +56,8 @@ body{
     outline-color: #365940;
     background-color: transparent;
 }
-.input-container button{
+
+.input-container button {
     background-color: #365940;
     color: #e7e7e7;
     width: 20%;
@@ -61,15 +68,17 @@ body{
     border-radius: 10px;
     cursor: pointer;
 }
-.input-container button:hover{
+
+.input-container button:hover {
     background-color: #365940b9;
 }
 
-.result{
+#result {
     font-size: 1.2rem;
+    word-wrap: break-word;
 }
 
-.info-container{
+.info-container {
     background-color: #9b3822a7;
     width: 100%;
     padding: 6% 12%;
