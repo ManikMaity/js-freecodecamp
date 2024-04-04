@@ -10,7 +10,7 @@ Collection of small js projects I did👨‍💻
 | **Music App**               |                     |[Live App](https://music-app-manik.netlify.app/)            |
 | **Note App**               | HTML, CSS, JavaScript - export and import, classes                    | [Live App](https://note-app-manik.netlify.app/)           |
 | **Date Formater**               | HTML, CSS, JavaScript                    | [Live App](https://date-formatter-manik.netlify.app/)           |
-| ****               |                     |            |
+| **Palindrome Checker**               | HTML, CSS, JavaScript - regex                    | [Live App](https://palindrome-checker-manik.netlify.app/)          |
 | ****               |                     |            |
 | ****               |                     |            |
 | ****               |                     |            |
