@@ -58,7 +58,7 @@ body{
     width: 100%;
 }
 .result img{
-    height: 30px;
+    height: 25px;
     cursor: pointer;
 }
 .result-container input{
@@ -66,5 +66,7 @@ body{
     height: 100%;
     color: var(--white);
     padding: 0px 15px;
+    text-align: center;
+    font-weight: bold;
     font-size: 1rem;
 }
