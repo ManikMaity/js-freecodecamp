@@ -1,0 +1,190 @@
+/* google font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --main-blue: #d2dfff;
+    --black: #13151a;
+    --muted-text: #424242;
+    --red: #f38181b0;
+    --green: #4CCD99b0;
+    --yellow: #FCE38A;
+    --blue: #8b8dff;
+    --light-blue : #DFF5FF;
+    --blue : #98deff;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    color: var(--black);
+}
+
+.main {
+    display: flex;
+    height: 100%;
+    padding: 2%;
+    width: 100%;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover{
+    opacity: 0.7;
+}
+
+
+
+
+/*------------------------ left container starts here-------------------  */
+.left-container {
+    width: 40%;
+}
+
+
+/* money left card  */
+.money-left-card {
+    display: flex;
+    height: 170px;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: var(--main-blue);
+    border-radius: 15px;
+}
+
+.chart-container canvas {
+    cursor: pointer;
+}
+
+.money-left-card .card-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.money-left-card h1 {
+    font-weight: 800;
+    font-size: 4.2rem;
+    line-height: 1;
+}
+
+.money-left-card p {
+    font-size: 1.5rem;
+    color: #424242;
+}
+
+
+/* total ammounts section  */
+
+.budg-exp-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.total-budget {
+    background-color: var(--green);
+}
+
+.total-card {
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+
+.total-card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-card h4 {
+    font-size: 2rem;
+}
+.total-card p{
+    color: var(--muted-text);
+}
+
+.total-exp {
+    background-color: var(--red);
+}
+
+
+
+/* add budget or exp section  */
+.add-money-card {
+    background-color: var(--light-blue);
+    margin-top: 20px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.add-type{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius:15px 15px 0px 0 ;
+    height: 35px;
+    overflow: hidden;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.exp-for input{
+    display: none;
+}
+
+input[type="number"],
+input[type="text"]
+{
+    font-size: 1rem;
+    padding: 5px 10px;
+    height: 35px;
+    border: none;
+    outline-color: var(--blue);
+    border-radius: 5px;
+}
+
+.exp-for{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.exp-for label,
+.exp-for button{
+    background-color: var(--main-blue);
+    border: 2px solid #fff;
+    padding: 2px 5px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.exp-for button{
+    background-color: var(--yellow);
+}
+
+
+.exp-for label:hover{
+    background-color: var(--yellow);
+}
+
+/*------------------------------- left container ends here--------------------------  */

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expence Traker</title>
+    <!-- css file link  -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- fontawsome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="main">
+
+        <!---------------------------- left section strats here  -------------------------->
+        <div class="left-container">
+
+
+            <div class="display-cards">
+
+                <!-- money left card  -->
+                <div class="money-left-card">
+                    <div class="card-text-container">
+                        <p>Buget Left</p>
+                        <h1>₹8000</h1>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+
+
+                <!-- total money cards  -->
+                <div class="budg-exp-container">
+
+                    <div class="total-card total-budget">
+                        <p>Total Budget</p>
+                        <div>
+                            <h4>₹12000</h4>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+
+                    <div class="total-card total-exp">
+                        <p>Total Expence</p>
+                        <div>
+                            <h4>₹4000</h4>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- add exp or budget card  -->
+                <div class="add-money-card">
+
+                    <div class="add-type">
+                        <button>Expence</button>
+                        <button>Budget</button>
+                    </div>
+
+
+                    <div class="flex-col add-amount">
+                        <label for="addAmount">Amount</label>
+                        <input type="number" min="0" name="amount" id="addAmount">
+                    </div>
+
+                    <div class="exp-for">
+                        <input type="radio" id="shoping" name="expFor" value="shoping">
+                        <label for="shoping">Shoping🛍️</label>
+                        <input type="radio" id="food" name="expFor" value="food">
+                        <label for="food">Food😋</label>
+                        <input type="radio" id="subscription" name="expFor" value="subscription">
+                        <label for="subscription">Subscription📱</label>
+                        <button>Add new <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <!------------------------------------ left section ends here  --------------------->
+
+
+
+
+        <div class="right-container">
+
+        </div>
+    </div>
+
+
+
+    <!-- chart.js cdn for pie card  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="./scripts/app.js"></script>
+
+</body>
+
+</html>
