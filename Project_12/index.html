@@ -15,7 +15,12 @@
 </head>
 
 <body>
+    <button class="mobile-add-btn"><i class="fa-solid fa-plus"></i></button>
     <div class="main">
+        <div class="greeting">
+            <p>Hi</p>
+            <h1>User,</h1>
+        </div>
 
         <!---------------------------- left section strats here  -------------------------->
         <div class="left-container">
@@ -47,7 +52,7 @@
                     </div>
 
                     <div class="total-card total-exp">
-                        <p>Total Expence</p>
+                        <p>Total Expense</p>
                         <div>
                             <h4>₹4000</h4>
                             <i class="fa-solid fa-plus"></i>
@@ -55,15 +60,18 @@
                     </div>
                 </div>
 
-                <!-- add exp or budget card  -->
-                <div class="add-money-card">
 
-                    <div class="add-type">
-                        <button>Expence</button>
-                        <button>Budget</button>
-                    </div>
+            </div>
+            <!-- add exp or budget card  -->
 
+            <div class="add-money-card">
 
+                <div class="add-type">
+                    <button class="add-exp-btn">Expense</button>
+                    <button class="add-bud-btn">Budget</button>
+                </div>
+
+                <div class="form-container">
                     <div class="flex-col add-amount">
                         <label for="addAmount">Amount</label>
                         <input type="number" min="0" name="amount" id="addAmount">
@@ -71,7 +79,7 @@
 
                     <div class="exp-for">
                         <input type="radio" id="shoping" name="expFor" value="shoping">
-                        <label for="shoping">Shoping🛍️</label>
+                        <label for="shoping">Shopping🛍️</label>
                         <input type="radio" id="food" name="expFor" value="food">
                         <label for="food">Food😋</label>
                         <input type="radio" id="subscription" name="expFor" value="subscription">
@@ -79,11 +87,13 @@
                         <button>Add new <i class="fa-solid fa-plus"></i>
                         </button>
                     </div>
-
-
-
                 </div>
 
+
+                <div class="add-money-card-btn">
+                    <button>Add <i class="fa-solid fa-plus"></i></button>
+                    <button>Clear</button>
+                </div>
 
 
             </div>
@@ -95,7 +105,174 @@
 
 
         <div class="right-container">
+            <div class="history-text">
+                <h1>History</h1>
+                <select name="sortTrans" id="sortTrans">
+                    <option value="Default">Default</option>
+                    <option value="highToLow">High to Low</option>
+                    <option value="highToLow">Low to High</option>
+                </select>
+            </div>
 
+            <div class="money-history-container">
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="trans-item">
+                    <div>
+                        <h4>-₹30</h4>
+                        <p>Shopping🛍️</p>
+                    </div>
+                    <p class="trans-date">4:15AM 04/04/2024</p>
+                    <div class="trans-item-btn">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
 
