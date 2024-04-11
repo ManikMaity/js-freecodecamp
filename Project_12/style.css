@@ -152,6 +152,10 @@ button:hover {
 
 
 /* add budget or exp section  */
+
+
+
+
 .add-money-card {
     background-color: var(--light-blue);
     margin-top: 20px;
@@ -171,9 +175,14 @@ button:hover {
     overflow: hidden;
 }
 
-.add-type .add-exp-btn {
+.selected-add-exp {
     background-color: var(--red);
     box-shadow: 2px 0px 10px #474747a7;
+    z-index: 10;
+}
+.selected-add-bud {
+    background-color: var(--green);
+    box-shadow: -2px 0px 10px #474747a7;
     z-index: 10;
 }
 
@@ -249,6 +258,7 @@ input[type="text"] {
     font-weight: 600;
 }
 
+
 /*------------------------------- left container ends here--------------------------  */
 
 /* -------------------------------- right container starts here ----------------------   */
@@ -320,6 +330,17 @@ input[type="text"] {
     color: var(--muted-text);
 }
 
+.tranTagContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tranTagContainer .trans-date{
+    display: none;
+}
+
+
 /* -------------------------------- right container ends here ----------------------   */
 
 .mobile-add-btn {
@@ -375,6 +396,30 @@ input[type="text"] {
         padding: 20px 30px;
     }
 
+    .show {
+        display: flex !important;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+        }
+    }
+
+   
+
+    .rotatePlus{
+        transform: rotateY(40deg);
+        -webkit-transform: rotate(40deg);
+    }
+
+
+
+
     .add-money-card {
         display: none;
         box-shadow: 0px 0px 30px #00000099;
@@ -383,7 +428,12 @@ input[type="text"] {
         bottom: 20px;
         left: 50%;
         transform: translate(-50%, -50%);
+        animation-name: fade;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
     }
+
+    
 
     .money-left-card p {
         font-size: 1.2rem;
@@ -428,9 +478,28 @@ input[type="text"] {
         padding: 5px 10px;
     }
 
+    .trans-item h4{
+        font-size: 1.2rem;
+        white-space: nowrap;
+    }
+    .trans-item p{
+        font-size: 1rem;
+    }
+
+    .trans-item-btn button {
+        font-size: 0.8rem;
+        height: 30px;
+        width: 30px;
+    }
+
     .trans-date {
         display: none;
     }
+    .tranTagContainer .trans-date{
+        font-size: 0.7rem;
+        display: flex;
+    }
+    
 
     .mobile-add-btn {
         display: grid;
