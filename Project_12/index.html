@@ -18,7 +18,8 @@
     <button class="mobile-add-btn"><i class="fa-solid fa-plus"></i></button>
     <div class="main">
         <div class="greeting">
-            <p>Hi <h1>User,</h1></p>
+            <p>Hi <h1>User,</h1>
+            </p>
         </div>
 
         <!---------------------------- left section strats here  -------------------------->
@@ -46,7 +47,6 @@
                         <p>Total Budget</p>
                         <div>
                             <h4>₹<span id="totalBudget">0</span></h4>
-                            <i class="fa-solid fa-plus"></i>
                         </div>
                     </div>
 
@@ -54,7 +54,6 @@
                         <p>Total Expense</p>
                         <div>
                             <h4>₹<span id="totalExp">0</span></h4>
-                            <i class="fa-solid fa-plus"></i>
                         </div>
                     </div>
                 </div>
@@ -66,8 +65,8 @@
             <div class="add-money-card">
 
                 <div class="add-type">
-                    <button class="add-exp-btn selected-add-exp">Expense</button>
-                    <button class="add-bud-btn">Budget</button>
+                    <button class="add-exp-btn selected-add-exp">Add Expense</button>
+                    <button class="add-bud-btn">Change Budget</button>
                 </div>
 
                 <div class="form-container">
@@ -77,15 +76,24 @@
                     </div>
 
                     <div class="exp-for">
-                        <input type="radio" id="shoping" name="expFor" value="Shopping🛍️">
-                        <label for="shoping">Shopping🛍️</label>
-                        <input type="radio" id="food" name="expFor" value="Food😋">
-                        <label for="food">Food😋</label>
-                        <input type="radio" id="subscription" name="expFor" value="Subscription📱">
-                        <label for="subscription">Subscription📱</label>
-                        <button>Add new <i class="fa-solid fa-plus"></i>
+                        <div class="tags-conatiner">
+                            <input type="radio" id="shoping" name="expFor" value="Shopping🛍️">
+                            <label for="shoping">Shopping🛍️</label>
+                            <input type="radio" id="food" name="expFor" value="Food😋">
+                            <label for="food">Food😋</label>
+                            <input type="radio" id="subscription" name="expFor" value="Subscription📱">
+                            <label for="subscription">Subscription📱</label>
+                        </div>
+                        <div class="tag-input">
+                            <input type="text" name="" maxlength="20" id="tagInputField">
+                            <button id="confirmNewTag"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                        <button id="addTagBtn">
+                            Add tag <i class="fa-solid fa-plus"></i>
                         </button>
+
                     </div>
+
                 </div>
 
 

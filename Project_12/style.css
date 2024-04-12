@@ -13,7 +13,7 @@
     --main-blue: #d2dfff;
     --black: #13151a;
     --muted-text: #424242;
-    --red: #b14242c4;
+    --red: #ed9292;
     --green: #297054b0;
     --yellow: #FCE38A;
     --blue: #8b8dff;
@@ -53,6 +53,10 @@ button:hover {
     opacity: 0.7;
 }
 
+.show {
+    display: flex !important;
+}
+
 .greeting {
     display: none;
     line-height: 1;
@@ -84,7 +88,7 @@ button:hover {
 /* money left card  */
 .money-left-card {
     display: flex;
-    height: 170px;
+    height: 150px;
     justify-content: space-between;
     padding: 20px 40px;
     background-color: var(--main-blue);
@@ -127,7 +131,7 @@ button:hover {
 }
 
 .total-card {
-    padding: 15px 20px;
+    padding: 10px 15px;
     border-radius: 15px;
 }
 
@@ -175,11 +179,31 @@ button:hover {
     overflow: hidden;
 }
 
+.tag-input {
+    width: 100px;
+    display: none;
+    background-color: #fff;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 25px;
+}
+
+.tag-input input {
+    font-size: 0.8rem !important;
+    height: 100%;
+    outline: none;
+    display: inline-block !important;
+    width: 100%;
+}
+
 .selected-add-exp {
     background-color: var(--red);
     box-shadow: 2px 0px 10px #474747a7;
     z-index: 10;
 }
+
 .selected-add-bud {
     background-color: var(--green);
     box-shadow: -2px 0px 10px #474747a7;
@@ -330,13 +354,13 @@ input[type="text"] {
     color: var(--muted-text);
 }
 
-.tranTagContainer{
+.tranTagContainer {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
-.tranTagContainer .trans-date{
+.tranTagContainer .trans-date {
     display: none;
 }
 
@@ -350,7 +374,7 @@ input[type="text"] {
     width: 60px;
     border-radius: 50px;
     background-color: var(--yellow);
-    box-shadow: 0px 0px 30px #00000099;
+    box-shadow: 0px 0px 30px #0000005c;
     position: fixed;
     bottom: 20px;
     left: 50%;
@@ -396,23 +420,19 @@ input[type="text"] {
         padding: 20px 30px;
     }
 
-    .show {
-        display: flex !important;
-    }
-
     @keyframes fade {
         from {
             opacity: 0;
         }
-    
+
         to {
             opacity: 1;
         }
     }
 
-   
 
-    .rotatePlus{
+
+    .rotatePlus {
         transform: rotateY(40deg);
         -webkit-transform: rotate(40deg);
     }
@@ -433,7 +453,7 @@ input[type="text"] {
         animation-timing-function: ease-in-out;
     }
 
-    
+
 
     .money-left-card p {
         font-size: 1.2rem;
@@ -478,11 +498,12 @@ input[type="text"] {
         padding: 5px 10px;
     }
 
-    .trans-item h4{
+    .trans-item h4 {
         font-size: 1.2rem;
         white-space: nowrap;
     }
-    .trans-item p{
+
+    .trans-item p {
         font-size: 1rem;
     }
 
@@ -495,11 +516,12 @@ input[type="text"] {
     .trans-date {
         display: none;
     }
-    .tranTagContainer .trans-date{
+
+    .tranTagContainer .trans-date {
         font-size: 0.7rem;
         display: flex;
     }
-    
+
 
     .mobile-add-btn {
         display: grid;
