@@ -15,6 +15,31 @@
 </head>
 
 <body>
+    <!-- edit trans item form -->
+    <div id="" class="edit-money-card">
+        <div class="add-type">
+            <p>Edit Expense</p>
+            <button id="closeEdit">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="edit-form-container">
+            <div class="flex-col edit-amount">
+                <label for="editAmount">Amount</label>
+                <input type="number" min="0" name="amount" id="editAmount">
+            </div>
+            <div class="exp-for-edit flex-col">
+                <label for="tagName">Tag Name</label>
+                <input type="text" minlength="25" id="tagName">
+            </div>
+        </div>
+        <div class="info-container"><i class="fa-solid fa-circle-info"></i>
+            <p class="info"></p>
+        </div>
+        <button id="editTranBtn">Edit Expense <i class="fa-regular fa-pen-to-square"></i></button>
+    </div>
+
+    <!-- mobie btn and greet user  -->
     <button class="mobile-add-btn"><i class="fa-solid fa-plus"></i></button>
     <div class="main">
         <div class="greeting">
@@ -95,7 +120,9 @@
                     </div>
 
                 </div>
-
+                <div class="info-container"><i class="fa-solid fa-circle-info"></i>
+                    <p class="info"></p>
+                </div>
 
                 <div class="add-money-card-btn">
                     <button id="addBtn">Add <i class="fa-solid fa-plus"></i></button>
@@ -115,9 +142,9 @@
             <div class="history-text">
                 <h1>History</h1>
                 <select name="sortTrans" id="sortTrans">
-                    <option value="Default">Default</option>
+                    <option value="default">Default</option>
                     <option value="highToLow">High to Low</option>
-                    <option value="highToLow">Low to High</option>
+                    <option value="lowToHigh">Low to High</option>
                 </select>
             </div>
 

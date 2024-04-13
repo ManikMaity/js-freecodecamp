@@ -19,7 +19,8 @@ export default class display {
         const allTrans = display.getAllTrans();
         const exiting = allTrans.find(item => item.id == trans.id);
         if (exiting){
-            
+            exiting.amount = trans?.amount;
+            exiting.tag = trans?.tag;
         }
         else{
             allTrans.unshift(trans);
@@ -34,6 +35,12 @@ export default class display {
         const filteredTrans = allTrans.filter(item => item.id != tranId);
         localStorage.setItem("trans-data", JSON.stringify(filteredTrans));
         
+    }
+    static findTran(id){
+        const allTrans = display.getAllTrans();
+        const tranId = Number(id);
+        const tran = allTrans.find(item => item.id == tranId);
+        return tran;
     }
 
     static getAllTags (){

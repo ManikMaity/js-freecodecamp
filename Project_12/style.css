@@ -157,9 +157,6 @@ button:hover {
 
 /* add budget or exp section  */
 
-
-
-
 .add-money-card {
     background-color: var(--light-blue);
     margin-top: 20px;
@@ -211,7 +208,8 @@ button:hover {
 }
 
 
-.add-money-card .form-container {
+.add-money-card .form-container,
+.edit-form-container {
     padding: 0px 20px;
     display: flex;
     flex-direction: column;
@@ -366,6 +364,70 @@ input[type="text"] {
 
 
 /* -------------------------------- right container ends here ----------------------   */
+
+
+/* edit money card stars here  */
+.edit-money-card {
+    overflow: hidden;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 999;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--light-blue);
+    border-radius: 15px;
+    font-size: 1.1rem;
+    box-shadow: 0px 0px 30px #0000005c;
+}
+
+.edit-money-card>button {
+    background-color: var(--yellow);
+    padding: 10px 0;
+    font-weight: 500;
+}
+
+.edit-money-card .add-type {
+    position: relative;
+}
+
+.edit-money-card .add-type button {
+    position: absolute;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    display: grid;
+    place-content: center;
+    background-color: var(--light-blue);
+}
+
+
+
+.edit-money-card .add-type {
+    background-color: var(--yellow);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.info-container {
+    display: none;
+    gap: 8px;
+    color: var(--red);
+    font-size: 0.75rem;
+    line-height: 0;
+    margin-left: 15px;
+    font-family: monospace;
+    align-items: center;
+
+}
+
+/* edit money card ends here  */
 
 .mobile-add-btn {
     display: none;
