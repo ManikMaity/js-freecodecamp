@@ -1,0 +1,1 @@
+document.querySelector("body h1").style.color = "red";
