@@ -5,3 +5,70 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+body{
+  background-color: #131313;
+  color: rgb(226, 226, 226);
+}
+
+h1{
+  text-align: center;
+  padding: 8px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  background-color: #0d111a;
+}
+
+.team-stats{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 8px 5%;
+  font-weight: 500;
+  font-size: 1rem;
+  background-color: #080910;
+}
+
+.team-stats p span {
+  font-weight: 400;
+}
+
+.option-container{
+  display: flex;
+  padding: 8px;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  gap: 25px;
+}
+#players{
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.player-card{
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 15px;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 850px) {
+  .cards{
+  grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .cards{
+  grid-template-columns: repeat(1, 1fr);
+  }
+}
