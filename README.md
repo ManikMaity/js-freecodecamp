@@ -11,6 +11,6 @@ Collection of small js projects I did👨‍💻
 | **Note App**               | HTML, CSS, JavaScript - export and import, classes                    | [Live App](https://note-app-manik.netlify.app/)           |
 | **Date Formater**               | HTML, CSS, JavaScript                    | [Live App](https://date-formatter-manik.netlify.app/)           |
 | **Palindrome Checker**               | HTML, CSS, JavaScript - regex                    | [Live App](https://palindrome-checker-manik.netlify.app/)          |
-| ****               |                     |            |
-| ****               |                     |            |
+| **Expense Tracker** |HTML. CSS, JavaScript, Chart.js(For pie chart)                     | [Live App](https://expense-tracker-manik.netlify.app/)           |
+| **Cricket Cards Filter**               |HTML. CSS, JavaScript                     |[Live App](https://cricket-cards-filter-manik.netlify.app/)            |
 | ****               |                     |            |
