@@ -1,0 +1,11 @@
+#myCanvas{
+    border: 1px solid #000;
+    background-color: rgb(131, 214, 128);
+    display: inline-block;
+}
+
+#drawShapes{
+    border: 1px solid #000;
+    background-color: #ffffff;
+    display: inline-block;
+}
