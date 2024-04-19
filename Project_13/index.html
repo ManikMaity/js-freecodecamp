@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Cards</title>
+    <title>Cricket Cards</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <h1 class="title">Team stats⚽</h1>
+    <h1 class="title">Indian Team Stats 🏏</h1>
     <main>
         <div class="team-stats">
             <p>Team: <span id="team"></span></p>
@@ -18,22 +18,28 @@
             <p>Head coach: <span id="head-coach"></span></p>
         </div>
         <div class="option-container">
+            <div>
             <label class="options-label" for="players">Filter Teammates:</label>
             <select name="players" id="players">
                 <option value="all">All Players</option>
-                <option value="nickname">Nicknames</option>
-                <option value="forward">Position Forward</option>
-                <option value="midfielder">Position Midfielder</option>
-                <option value="defender">Position Defender</option>
-                <option value="goalkeeper">Position Goalkeeper</option>
+                <option value="age">Age</option>
+                <option value="batter">Batsman</option>
+                <option value="bowler">Bowler</option>
+                <option value="all-rounder">All Rounder</option>
+                <option value="wicket-keeper">Wicket Keeper</option>
             </select>
+        </div>
+        <div class="search-container">
+            <input data-search-input type="text" name="saerch" id="saerchInput" placeholder="Enter player name here...">
+        </div>
         </div>
         <div class="cards" id="player-cards">
             <div class="player-card">
                 <h2>Sergio Almirón</h2>
-                <p>Position: forward</p>
+                <p>Type of Player: forward</p>
                 <p>Number: 1</p>
-                <p>Nickname: N/A</p>
+                <p>Age: N/A</p>
+                <p>RHB</p>
             </div>
             <div class="player-card">
                 <h2>Sergio Batista</h2>

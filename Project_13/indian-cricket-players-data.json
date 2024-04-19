@@ -1,0 +1,233 @@
+{
+     "team" : "India",
+     "sport" : "Cricket",
+     "year" : 2024,
+     "isWorldCupWinner" : true,
+     "headCoachName" : "Rahul Dravid",
+     "players": [
+          {
+               "name": "Rohit Sharma",
+               "number": 45,
+               "playerType": "Batter",
+               "age": 36,
+               "hand": "RHB"
+          },
+          {
+               "name": "Virat Kohli",
+               "number": 18,
+               "playerType": "Batter",
+               "age": 35,
+               "hand": "RHB"
+          },
+          {
+               "name": "Jasprit Bumrah",
+               "number": 93,
+               "playerType": "Bowler",
+               "age": 30,
+               "hand": "RHB"
+          },
+          {
+               "name": "Ravindra Jadeja",
+               "number": 8,
+               "playerType": "All Rounder",
+               "age": 35,
+               "hand": "LHB"
+          },
+          {
+               "name": "Ravichandran Ashwin",
+               "number": 99,
+               "playerType": "Bowler",
+               "age": 37,
+               "hand": "RHB"
+          },
+          {
+               "name": "Mohammad Shami",
+               "number": 11,
+               "playerType": "Bowler",
+               "age": 33,
+               "hand": "RHB"
+          },
+          {
+               "name": "Mohammed Siraj",
+               "number": 13,
+               "playerType": "Bowler",
+               "age": 30,
+               "hand": "RHB"
+          },
+          {
+               "name": "Kl Rahul",
+               "number": 1,
+               "playerType": "Wicket Keeper",
+               "age": 31,
+               "hand": "RHB"
+          },
+          {
+               "name": "Shubman Gill",
+               "number": 77,
+               "playerType": "Batter",
+               "age": 24,
+               "hand": "RHB"
+          },
+          {
+               "name": "Hardik Pandya",
+               "number": 33,
+               "playerType": "All Rounder",
+               "age": 30,
+               "hand": "RHB"
+          },
+          {
+               "name": "Suryakumar Yadav",
+               "number": 63,
+               "playerType": "Batter",
+               "age": 33,
+               "hand": "RHB"
+          },
+          {
+               "name": "Rishabh Pant",
+               "number": 17,
+               "playerType": "Wicket Keeper",
+               "age": 26,
+               "hand": "LHB"
+          },
+          {
+               "name": "Kuldeep Yadav",
+               "number": 23,
+               "playerType": "Bowler",
+               "age": 29,
+               "hand": "LHB"
+          },
+          {
+               "name": "Axar Patel",
+               "number": 20,
+               "playerType": "Bowler",
+               "age": 30,
+               "hand": "LHB"
+          },
+          {
+               "name": "Yashasvi Jaiswal",
+               "number": 64,
+               "playerType": "Batter",
+               "age": 22,
+               "hand": "LHB"
+          },
+          {
+               "name": "Rinku Singh",
+               "number": 35,
+               "playerType": "Batter",
+               "age": 26,
+               "hand": "LHB"
+          },
+          {
+               "name": "Tilak Verma",
+               "number": 72,
+               "playerType": "Batter",
+               "age": 21,
+               "hand": "LHB"
+          },
+          {
+               "name": "Ruturaj Gaikwad",
+               "number": 31,
+               "playerType": "Batter",
+               "age": 27,
+               "hand": "RHB"
+          },
+          {
+               "name": "Shardul Thakur",
+               "number": 54,
+               "playerType": "Bowler",
+               "age": 32,
+               "hand": "RHB"
+          },
+          {
+               "name": "Shivam Dube",
+               "number": 25,
+               "playerType": "All Rounder",
+               "age": 30,
+               "hand": "LHB"
+          },
+          {
+               "name": "Ravi Bishnoi",
+               "number": 56,
+               "playerType": "Bowler",
+               "age": 23,
+               "hand": "RHB"
+          },
+          {
+               "name": "Jitesh Sharma",
+               "number": 6,
+               "playerType": "Wicketkeeper Batter",
+               "age": 30,
+               "hand": "RHB"
+          },
+          {
+               "name": "Washington Sundar",
+               "number": 5,
+               "playerType": "All Rounder",
+               "age": 24,
+               "hand": "LHB"
+          },
+          {
+               "name": "Mukesh Kumar",
+               "number": 49,
+               "playerType": "Bowler",
+               "age": 30,
+               "hand": "RHB"
+          },
+          {
+               "name": "Sanju Samson",
+               "number": 9,
+               "playerType": "Wicket Keeper",
+               "age": 29,
+               "hand": "RHB"
+          },
+          {
+               "name": "Arshdeep Singh",
+               "number": 2,
+               "playerType": "Bowler",
+               "age": 25,
+               "hand": "LHB"
+          },
+          {
+               "name": "Ks Bharat",
+               "number": 14,
+               "playerType": "Wicket Keeper",
+               "age": 30,
+               "hand": "RHB"
+          },
+          {
+               "name": "Prasidh Krishna",
+               "number": 24,
+               "playerType": "Bowler",
+               "age": 28,
+               "hand": "RHB"
+          },
+          {
+               "name": "Avesh Khan",
+               "number": 65,
+               "playerType": "Bowler",
+               "age": 27,
+               "hand": "RHB"
+          },
+          {
+               "name": "Rajat Patidar",
+               "number": 87,
+               "playerType": "Batter",
+               "age": 30,
+               "hand": "RHB"
+          },
+          {
+               "name": "Sarfaraz Khan",
+               "number": 97,
+               "playerType": "Batter",
+               "age": 26,
+               "hand": "RHB"
+          },
+          {
+               "name": "Dhruv Jurel",
+               "number": 16,
+               "playerType": "Wicket Keeper",
+               "age": 23,
+               "hand": "RHB"
+          }
+     ]
+}
