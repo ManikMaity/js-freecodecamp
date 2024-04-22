@@ -113,3 +113,6 @@ ctx2.lineTo(60, 60);
 ctx2.fillStyle = "lightblue"
 ctx2.fill(); 
 ```
+
+## Clear react
+- The clearRect() method is used to clear a rectangular area of the canvas. The cleared rectangle is transparent.

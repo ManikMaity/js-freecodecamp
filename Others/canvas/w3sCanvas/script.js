@@ -1,11 +1,14 @@
 // finding the canvas ele.
 const canvas = document.getElementById("myCanvas");
 const shapeCanvas = document.getElementById("drawShapes");
+const canvas3 = document.getElementById("canvas3")
 
 // creatng a drawing obj using .getContext();
 /** @type {CanvasRenderingContext2D} */
 const ctx = canvas.getContext("2d");
 const ctx2 = shapeCanvas.getContext("2d");
+const ctx3 = canvas3.getContext("2d");
+
 
 //Drawing on canvas
 ctx.fillStyle = "red";
@@ -63,3 +66,11 @@ ctx2.lineTo(60, 95);
 ctx2.lineTo(60, 60);
 ctx2.fillStyle = "lightblue"
 ctx2.fill();
+
+
+ctx3.fillStyle = "pink";
+ctx3.fillRect(50, 50, 100, 100);
+ctx3.clearRect(60, 60, 50, 50);
+ctx3.strokeStyle = "darkgreen"
+ctx3.strokeRect(20, 20, 30, 30);
+ctx3.clearRect(35, 25, 20, 20);
