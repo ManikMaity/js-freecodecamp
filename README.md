@@ -14,3 +14,4 @@ Collection of small js projects I did👨‍💻
 | **Expense Tracker** |HTML. CSS, JavaScript, Chart.js(For pie chart)                     | [Live App](https://expense-tracker-manik.netlify.app/)           |
 | **Cricket Cards Filter**               |HTML. CSS, JavaScript                     |[Live App](https://cricket-cards-filter-manik.netlify.app/)            |
 | **TODO APP**               | HTML. CSS, JavaScript                    |[Live App](https://todoapp-manik.netlify.app/)            |
+|**Image Editor**|HTML. CSS, JavaScript|[Live App](https://image-editor-manik.netlify.app/)|
