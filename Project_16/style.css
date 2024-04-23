@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.game-container {
+  padding: 10px;
+  max-width: 800px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#gameCanvas {
+  height: 80%;
+  width: 100%;
+  background-color: #000;
+}
+
+#gameStat {
+  font-size: 3rem;
+}
+#resetGame {
+  background-color: #265d7e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+#resetGame:hover {
+  opacity: 0.9;
+}
+.controls {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+}
+
+.mobile-controls button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: #265d7e;
+  border: none;
+  color: white;
+}
+.mobile-controls {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .mobile-controls {
+    display: flex;
+  }
+  .controls {
+    justify-content: space-between;
+  }
+}
