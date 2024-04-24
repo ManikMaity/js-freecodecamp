@@ -4,6 +4,14 @@ const ctx = canvas.getContext("2d");
 const stat = document.getElementById("gameStat");
 const resetBtn = document.getElementById("resetGame");
 const mobileBtns = document.querySelectorAll(".mobile-controls button");
+const backgroundMusic = new Audio();
+backgroundMusic.src = "./music/background-music.mp3"
+backgroundMusic.loop = true;
+backgroundMusic.volume = 0.6;
+const pop = new Audio("./music/pop.mp3");
+const scoreMusic = new Audio("./music/score.mp3");
+
+
 
 const ctxDimention = {
   height: canvas.height,
@@ -53,6 +61,7 @@ resetBtn.addEventListener("click", resetGame);
 gameStart();
 
 function gameStart() {
+  backgroundMusic.play();
   createBall();
   nextTick();
 }
@@ -115,11 +124,15 @@ function drawBall(ballX = ball.ballX, ballY = ball.ballY) {
 function checkCollision() {
   if (ball.ballY <= 0 + ball.radius) {
     ball.ballYDirection *= -1;
+    pop.play();
   }
   if (ball.ballY >= ctxDimention.height - ball.radius) {
     ball.ballYDirection *= -1;
+    pop.play();
   }
   if (ball.ballX <= 0) {
+    scoreMusic.pause();
+    scoreMusic.currentTime = 0;
     score.player2 += 1;
     updateScore();
     createBall();
@@ -127,6 +140,8 @@ function checkCollision() {
   }
 
   if (ball.ballX >= ctxDimention.width) {
+    scoreMusic.pause();
+    scoreMusic.currentTime = 0;
     score.player1 += 1;
     updateScore();
     createBall();
@@ -138,6 +153,7 @@ function checkCollision() {
       ball.ballY < paddleOne.y + paddleOne.height
     ) {
       ball.ballXDirection *= -1;
+      pop.play();
     }
   }
   if (ball.ballX >= paddleTwo.x - ball.radius) {
@@ -146,6 +162,7 @@ function checkCollision() {
       ball.ballY < paddleTwo.y + paddleTwo.height
     ) {
       ball.ballXDirection *= -1;
+      pop.play();
     }
   }
 }
@@ -180,6 +197,7 @@ function changeDirectionMobile(e) {
 }
 
 function changeDirection(e) {
+  backgroundMusic.play();
   const keyPressed = e.keyCode;
   // paddle1 is controlled by "w" = 87 and "s" = 83 key
   const paddle1Up = 87;
@@ -215,6 +233,7 @@ function changeDirection(e) {
 }
 
 function updateScore() {
+  scoreMusic.play();
   stat.textContent = `${score.player1} : ${score.player2}`;
 }
 function resetGame() {
