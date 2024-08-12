@@ -1,0 +1,201 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f6f6f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  align-items: center;
+  background-color: #46ff90;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0;
+}
+header img{
+  height: 100px;
+  object-fit: contain;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+/* Panels */
+
+.action-panel, .output-panel {
+  line-height: 1.4em;
+  display: flex;
+  height: 350px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1.5em 2em;
+}
+
+.output-panel {
+  display: none;
+  justify-content: flex-start;
+  border: 2px solid;
+  padding: 1em 2em;
+}
+
+.loading-panel {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 400px;
+  text-align: center;
+}
+.loading-panel i {
+  font-size: 5rem;
+  color: #46ff90;
+}
+
+@keyframes rotate {
+  0%{
+      transform: rotate(0deg);
+  }
+  50%{
+      transform: rotate(360deg);
+  }
+  
+}
+
+.loader-container{
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+
+
+.output-panel p{
+  overflow-y: scroll;
+}
+
+/* text */
+
+h2 {
+  text-align: center;
+  font-weight: 400; 
+  margin-top: -26px;
+  background-color: #f6f6f6;
+  padding: 0 10px;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+p.tag-line {
+  font-family: 'Comic Neue';
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.ticker-choice-display {
+  display: flex;
+  align-items: center;
+  height: 3em; 
+}
+
+/* controls */
+
+form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  text-align: center;
+  padding: .43em;
+  font-size: 15px;
+  margin-bottom: 1em;
+  width: 80%;
+}
+
+.form-input-control {
+  display: flex;
+  width: 70%;
+}
+
+input[type="text"] {
+  padding: 1em;
+  border: 2px solid black;
+  border-right: none;
+}
+
+/* Buttons */
+
+.add-ticker-btn {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #000;
+  font-size: 1.5em;
+  padding: 0 .35em;
+  cursor: pointer;
+  border: 2px solid;
+}
+
+.add-ticker-btn:hover{
+  color: #46ff90;
+}
+
+
+.generate-report-btn {
+  width: 70%;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  font-family: 'Poppins', sans;
+  border: 2px solid #000000;
+  background-color: #46ff90;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: .09em;
+  font-size: 105%;
+}
+
+/* ticker display (ensure comma separated) */
+
+.ticker {
+  margin: 0 .1em;
+  content: '';
+}
+
+.ticker:after {
+  content: ',';
+}
+
+.ticker:last-child::after {
+  content: '';
+}
+
+/* footer */
+
+footer {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* stop ugly scroll bar on some browsers */
+.output-panel p::-webkit-scrollbar {
+  display: none;
+}
+
+.output-panel p::-moz-scrollbar {
+  display: none;
+}
